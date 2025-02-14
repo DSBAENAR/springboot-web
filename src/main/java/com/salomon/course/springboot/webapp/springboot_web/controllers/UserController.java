@@ -17,7 +17,7 @@ public class UserController {
     public Map<String,Object> details(Model model) {
         User user = new User("Salomon", "Baena");
         Map<String,Object> body = new HashMap<>();
-        
+        user.setEmail("dsbaenar@gmail.com");
         body.put("title","Hola Mundo Spring Boot");
         body.put("user",user);
         return body; //Retorna el nombre de la vista
