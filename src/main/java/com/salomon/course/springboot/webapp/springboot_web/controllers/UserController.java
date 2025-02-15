@@ -1,6 +1,7 @@
 package com.salomon.course.springboot.webapp.springboot_web.controllers;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +31,10 @@ public class UserController {
 
     @GetMapping("/list")
     public String list(ModelMap model) {
-        List<User> users = new ArrayList<>();
+        List<User> users = Arrays.asList(new User("Pepe", "Woods"),
+        new User("lalo", "perez","lalo@correo.co"),
+        new User("Salomon", "Baena","mail@org.edu"),
+        new User("Santiago", "Vega"));
         model.addAttribute("users", users);
         model.addAttribute("title","Listado usuarios:" );
         return "list";
