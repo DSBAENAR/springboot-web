@@ -7,8 +7,8 @@
 </head>
 <body>
     <h1 th:text="${title}"></h1>
-    <div th:if="${users.size() == 0}" th:text="${No tiene elementos Usuarios!}"></div>
-    <table>
+    <div th:if="${users.isEmpty()}" th:text="${'No tiene elementos Usuarios!'}"></div>
+    <table th:if="${!users.isEmpty()}">
         <thead>
             <tr>
                 <th>name</th>
